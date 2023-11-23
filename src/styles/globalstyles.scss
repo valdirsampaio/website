@@ -1,0 +1,52 @@
+@import './reset.scss';
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,300,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+
+:root {
+  --color-black: #242429;
+  --color-white: #FFFFFF;
+  --color-darkGrey: #969996;
+  --color-darkSlateGrey: #3c3d40;
+
+  --font-1: 8rem;
+  --font-2: 6rem;
+  --font-3: 2rem;
+  --font-4: 1.25rem;
+  --font-5: 1.2rem;
+  --font-6: 1rem;
+  --font-7: 0.875rem;
+  --font-8: 0.825rem;
+  --font-9: 0.75rem;
+
+  --font-weight-1: 700;
+  --font-weight-2: 500;
+  --font-weight-3: 400;
+  --font-weight-4: 300;
+
+  --font-line-height-1: normal;
+
+  --font-style: normal;
+
+  --font-type: "Satoshi", sans-serif;
+  --font-type-2: "Inter", sans-serif;
+}
+
+#root {
+  font-style: var(--font-style);
+  color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+button {
+  cursor: pointer;
+}
