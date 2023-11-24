@@ -6,13 +6,16 @@ export const ProjectCard = ({ project }) => {
         <>
             <li className={styles.projectCard}>
                 <button className={styles.projectButton}>
-                    <img src={project.image} alt="projectImg" className={styles.projectImage}/>
+                    <div className={styles.backgroundBox}>
+                        <img src={project.image} alt="projectImg" className={styles.projectImage} />
+                        <a href={project.url} className={styles.viewButton} data-back="VISIT WEBSITE" data-front="VISIT WEBSITE">
+                        </a>
+                    </div>
                     <div className={styles.textContainer}>
                         <p className={styles.projectName}>{project.name}</p>
                         <p className={styles.projectInfo}>{project.type} • {project.year} </p>
                     </div>
-                    <a href={project.url} className={styles.homeButton} data-back="VIEW MORE" data-front="VIEW MORE">
-                    </a>
+
                 </button>
             </li>
         </>

@@ -1,28 +1,32 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
-import React from "react"
+import React, { useContext } from "react"
 import { MdMenu } from "react-icons/md";
+import { UserContext } from "../../../providers/UserContext";
 
 export const Header = () => {
+
+    const { setLoading } = useContext(UserContext);
+
     return (
         <header className={styles.header}>
             <div className={styles.containerBox}>
-                <a className={styles.homeButton} data-back="VSAMPAIO" data-front="VSAMPAIO">
-                </a>
+                <Link to="/" onClick={() => setLoading(true)} className={styles.homeButton} data-back="VSAMPAIO" data-front="VSAMPAIO">
+                </Link>
                 <section className={styles.buttonSection}>
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.interactionButton}>
+                        <Link onClick={() => setLoading(true)} to="/" className={styles.interactionButton}>
                             <span>HOME</span>
-                        </button>
+                        </Link>
                         <button className={styles.interactionButton}>
                             <span>PROJECTS</span>
                         </button>
-                        <button className={styles.interactionButton}>
+                        <Link onClick={() => setLoading(true)} to="/about" className={styles.interactionButton}>
                             <span>ABOUT</span>
-                        </button>
-                        <button className={styles.interactionButton}>
+                        </Link>
+                        <a href="mailto:valdirgomes.sjr@gmail.com?subject=Hi from your portfolio!" target="_blank" className={styles.interactionButton}>
                             <span>CONTACT</span>
-                        </button>
+                        </a>
                     </div>
                     <div className={styles.responsiveButton}>
                         <button className={styles.buttonsList} ><MdMenu className={styles.listIcon} /> </button>

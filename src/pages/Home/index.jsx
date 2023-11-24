@@ -8,8 +8,12 @@ import { AiOutlinePaperClip } from "react-icons/ai";
 import { projects } from "../../assets/database/projects";
 import { ProjectCard } from "./ProjectCard";
 import iconHome from "../../assets/iconHome.png";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../providers/UserContext";
 
 export const Home = ({ }) => {
+
+    const { setLoading } = useContext(UserContext);
 
     return (
         <DefaultFooter>
@@ -20,21 +24,21 @@ export const Home = ({ }) => {
                             ——— &nbsp; &nbsp; <span>HI, I'M VALDIR SAMPAIO</span> &nbsp; &nbsp; ———
                         </p>
                         <h1>Let's create <img src={iconHome} alt="icon" className={styles.iconImage} />
-                            <br /> some <p className={styles.homeCard} data-back="products" data-front="websites">
+                            <br /> some <p className={styles.homeCard} data-back="websites" data-front="products">
                             </p>
-                             <span> together!</span>
+                            <span> together!</span>
                         </h1>
                         <div className={styles.buttonsContainer}>
-                            <button className={styles.socialButton} ><FaGithub className={styles.linkIcon} /> </button>
-                            <button className={styles.socialButton} ><FaLinkedinIn className={styles.linkIcon} /> </button>
-                            <button className={styles.socialButton} ><AiOutlinePaperClip className={styles.linkIcon} /> </button>
-                            <a className={styles.homeButton} data-back="GET IN TOUCH" data-front="GET IN TOUCH">
+                            <a href="https://github.com/valdirsampaio" target="_blank" className={styles.socialButton} ><FaGithub className={styles.linkIcon} /> </a>
+                            <a href="https://www.linkedin.com/in/valdirsampaio/" target="_blank" className={styles.socialButton} ><FaLinkedinIn className={styles.linkIcon} /> </a>
+                            <a href="https://online.fliphtml5.com/pexdn/biuh/#p=1" target="_blank" className={styles.socialButton} ><AiOutlinePaperClip className={styles.linkIcon} /> </a>
+                            <a href="mailto:valdirgomes.sjr@gmail.com?subject=Hi from your portfolio!" target="_blank" className={styles.contactButton} data-back="GET IN TOUCH" data-front="GET IN TOUCH">
                             </a>
                         </div>
                     </section>
                     <section className={styles.projectsSection}>
                         <p className={styles.sectionTitle}>
-                            ————— SELECTED PROJECTS —————
+                            ——— &nbsp; &nbsp; <span>SELECTED PROJECTS</span> &nbsp; &nbsp; ———
                         </p>
                         <ul className={styles.projectsList}>
                             {
@@ -48,12 +52,14 @@ export const Home = ({ }) => {
                     </section>
                     <section className={styles.aboutSection}>
                         <p className={styles.sectionTitle}>
-                            ————— ABOUT ME —————
+                            ——— &nbsp; &nbsp; <span>ABOUT ME</span> &nbsp; &nbsp; ———
                         </p>
-                        <h3>
-                            ... I'm a passionate designer who thrives on the dance between creativity and functionality. With a boundless curiosity to create meaningful experiences, I dive headfirst into the field of product design.
+                        <h3>... Always committed to carrying out projects with excellence and organization, in order to provide the best experience to the customer,<span> as well as facilitating the work of the team included in the project. </span>
                         </h3>
-                        <a className={styles.homeButton} data-back="ABOUT ME" data-front="ABOUT ME"></a>
+                        <div className={styles.buttonsContainer}>
+                            <Link onClick={() => setLoading(true)} to="/about" className={styles.contactButton} data-back="ABOUT ME" data-front="ABOUT ME">
+                            </Link>
+                        </div>
                     </section>
                 </div>
             </DefaultHeader>

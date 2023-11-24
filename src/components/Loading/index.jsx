@@ -1,4 +1,4 @@
-import loading from "../../assets/pulse.svg";
+import pulse from "../../assets/pulse.svg";
 import styles from "./style.module.scss"
 import React from "react";
 

@@ -1,0 +1,353 @@
+.aboutPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+    margin: 5rem 0rem 5rem 0rem;
+
+    .infoSection {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        .iconImage {
+            height: 17rem;
+            width: auto;
+            border-radius: 50%;
+            border: solid 0.75rem rgba(150, 153, 150, 0.2);
+        }
+
+        h2 {
+            width: 80%;
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-size: var(--font-2-5);
+            font-style: normal;
+            font-weight: var(--font-weight-3);
+            line-height: normal;
+            text-align: center;
+
+            span {
+                color: var(--color-darkGrey);
+            }
+        }
+
+        .aboutParagraph {
+            width: 50%;
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-size: 1.75rem;
+            font-style: normal;
+            font-weight: var(--font-weight-4);
+            line-height: 2.5rem;
+            text-align: center;
+
+            span {
+                color: var(--color-darkGrey);
+            }
+        }
+
+        .buttonsContainer {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            .socialButton {
+                background: none;
+
+                font-size: var(--font-3);
+                font-family: var(--font-type-2);
+                font-style: normal;
+                font-weight: var(--font-weight-4);
+                line-height: normal;
+                text-align: center;
+
+                position: relative;
+                display: inline-block;
+                width: 3.75rem;
+                height: 3.75rem;
+                margin-left: 3.75rem/5;
+                margin-right: 3.75rem/5;
+                border-radius: 50%;
+                overflow: hidden;
+                border: var(--color-darkGrey);
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    transition: all 0.25s ease;
+                    border-radius: 50%;
+                }
+
+                .linkIcon {
+                    position: relative;
+                    color: var(--color-white);
+                    margin-top: 1rem;
+                    font-size: 1.75rem;
+                    transition: all 0.25s ease;
+                    fill: var(--color-darkGrey);
+                }
+
+                &::after {
+                    box-shadow: inset 0 0 0 1px var(--color-darkSlateGrey);
+                }
+
+                &::before {
+                    background: var(--color-darkSlateGrey);
+                    box-shadow: inset 0 0 0 60px var(--color-black);
+                }
+
+                &:hover::before {
+                    box-shadow: inset 0 0 0 1px var(--color-black);
+                }
+            }
+
+            .contactButton {
+                border: none;
+                background: none;
+                cursor: pointer;
+
+                opacity: 1;
+                outline: 0;
+                position: relative;
+                text-align: center;
+                letter-spacing: 1px;
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+
+                    &:after {
+                        opacity: 1;
+                        transform: translateY(0) rotateX(0);
+                    }
+
+                    &:before {
+                        opacity: 0;
+                        transform: translateY(-50%) rotateX(90deg);
+                    }
+                }
+
+                &:after {
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 100%;
+                    display: block;
+                    transition: 0.5s;
+                    position: absolute;
+                    content: attr(data-back);
+                    transform: translateY(50%) rotateX(90deg);
+
+                    font-size: var(--font-4);
+                    color: var(--color-white);
+                    font-family: var(--font-type);
+                    font-style: normal;
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    border: solid 1px rgba(150, 153, 150, 0.25);
+                    background-color: none;
+                    padding: 1rem;
+                }
+
+                &:before {
+                    top: 0;
+                    left: 0;
+                    opacity: 1;
+                    width: 100%;
+                    display: block;
+                    transition: 0.5s;
+                    position: relative;
+                    content: attr(data-front);
+                    transform: translateY(0) rotateX(0);
+
+                    font-size: var(--font-4);
+                    color: var(--color-white);
+                    font-family: var(--font-type);
+                    font-style: normal;
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    border: solid 1px rgba(150, 153, 150, 0.25);
+                    background-color: none;
+                    padding: 1rem;
+                }
+
+            }
+        }
+    }
+
+    .aboutSection {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        margin-bottom: 5rem;
+
+        .resumeSection {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .resumeExperience {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 3rem;
+
+                .sectionTitle {
+                    color: var(--color-darkGrey);
+                    font-family: var(--font-type-2);
+                    font-weight: var(--font-weight-3);
+                    line-height: normal;
+                    font-style: normal;
+                    font-size: var(--font-8);
+        
+                    span {
+                        color: var(--color-darkGrey);
+                        font-family: var(--font-type);
+                        font-size: var(--font-5);
+                        font-style: normal;
+                        font-weight: var(--font-weight-3);
+                        line-height: normal;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+
+                .experienceParagraph {
+                    color: var(--color-white);
+                    font-family: var(--font-type-2);
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    font-style: normal;
+                    font-size: var(--font-6);
+                    text-transform: uppercase;
+        
+                    span {
+                        color: var(--color-darkGrey);
+                        font-family: var(--font-type-2);
+                        font-size: var(--font-6);
+                        font-style: normal;
+                        font-weight: var(--font-weight-3);
+                        line-height: normal;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+            }
+
+            .resumeEducation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 3rem;
+
+                .sectionTitle {
+                    color: var(--color-darkGrey);
+                    font-family: var(--font-type-2);
+                    font-weight: var(--font-weight-3);
+                    line-height: normal;
+                    font-style: normal;
+                    font-size: var(--font-8);
+        
+                    span {
+                        color: var(--color-darkGrey);
+                        font-family: var(--font-type);
+                        font-size: var(--font-5);
+                        font-style: normal;
+                        font-weight: var(--font-weight-3);
+                        line-height: normal;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+
+                .educationParagraph {
+                    color: var(--color-white);
+                    font-family: var(--font-type-2);
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    font-style: normal;
+                    font-size: var(--font-6);
+                    text-transform: uppercase;
+        
+                    span {
+                        color: var(--color-darkGrey);
+                        font-family: var(--font-type-2);
+                        font-size: var(--font-6);
+                        font-style: normal;
+                        font-weight: var(--font-weight-3);
+                        line-height: normal;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+            }
+        }
+
+        .skillsSection {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+
+            .sectionTitle {
+                color: var(--color-darkGrey);
+                font-family: var(--font-type-2);
+                font-weight: var(--font-weight-3);
+                line-height: normal;
+                font-style: normal;
+                font-size: var(--font-8);
+    
+                span {
+                    color: var(--color-darkGrey);
+                    font-family: var(--font-type);
+                    font-size: var(--font-5);
+                    font-style: normal;
+                    font-weight: var(--font-weight-3);
+                    line-height: normal;
+                    letter-spacing: 0.1rem;
+                }
+            }
+
+            .resumeSkills {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                p {
+                    color: var(--color-white);
+                    font-family: var(--font-type-2);
+                    font-weight: var(--font-weight-3);
+                    line-height: normal;
+                    font-style: normal;
+                    font-size: var(--font-6);
+                    text-transform: uppercase; 
+                }
+            }
+        }
+
+    }
+}

@@ -14,84 +14,44 @@
         justify-content: space-between;
         position: relative;
 
-        .homeButton {
-            border: none;
-            background: none;
-            cursor: pointer;
+        span {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+            justify-content: flex-start;
 
-            opacity: 1;
-            outline: 0;
-            position: relative;
-            text-align: center;
-            letter-spacing: 1px;
-            display: inline-block;
-            text-decoration: none;
-            text-transform: uppercase;
-
-            &:hover {
-
-                &:after {
-                    opacity: 1;
-                    transform: translateY(0) rotateX(0);
-                }
-
-                &:before {
-                    opacity: 0;
-                    transform: translateY(-50%) rotateX(90deg);
-                }
-            }
-
-            &:after {
-                top: 0;
-                left: 0;
-                opacity: 0;
-                width: 100%;
-                color: var(--color-darkGrey);
-                display: block;
-                transition: 0.5s;
-                position: absolute;
-                content: attr(data-back);
-                transform: translateY(50%) rotateX(90deg);
-                font-size: var(--font-3);
-                color: var(--color-darkGrey);
+            p {
+                color: var(--color-white);
                 font-family: var(--font-type);
+                font-size: var(--font-4);
                 font-style: normal;
-                font-weight: var(--font-weight-2);
+                font-weight: var(--font-weight-4);
                 line-height: normal;
             }
 
-            &:before {
-                top: 0;
-                left: 0;
-                opacity: 1;
-                width: 100%;
-                color: var(--color-white);
-                display: block;
-                transition: 0.5s;
-                position: relative;
-                content: attr(data-front);
-                transform: translateY(0) rotateX(0);
-                font-size: var(--font-3);
+            a {
                 color: var(--color-white);
                 font-family: var(--font-type);
+                font-size: var(--font-4);
                 font-style: normal;
-                font-weight: var(--font-weight-2);
+                font-weight: var(--font-weight-4);
                 line-height: normal;
+    
+                cursor: pointer;
             }
+        }
 
+
+        p {
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-size: var(--font-6);
+            font-style: normal;
+            font-weight: var(--font-weight-4);
+            line-height: normal;
+        }
     }
-
-    p {
-        color: var(--color-white);
-        font-family: var(--font-type);
-        font-size: var(--font-6);
-        font-style: normal;
-        font-weight: var(--font-weight-4);
-        line-height: normal;
-    }
-}
 }
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
