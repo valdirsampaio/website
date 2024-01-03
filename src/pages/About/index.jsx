@@ -15,7 +15,7 @@ export const About = ({ }) => {
                 <div className={styles.aboutPage}>
                     <section className={styles.infoSection}>
                         <img src={iconHome} alt="icon" className={styles.iconImage} />
-                        <h2>I'm Valdir Sampaio, a <span>Front-end Developer</span> based in Brazil.
+                        <h2>I'm Valdir Sampaio, a <span>Full Stack Developer</span> based in Brazil.
                         </h2>
                         <p className={styles.aboutParagraph}>
                             In my professional experiences I have always sought to bring excellence as the path, with the objective of creating innovative solutions for companies.<span> With a focus on the customer, each project carried out aimed to facilitate the work of those involved and bring the best possible solutions.</span>
@@ -34,6 +34,10 @@ export const About = ({ }) => {
                                 <h5 className={styles.sectionTitle}>
                                     ——— &nbsp; &nbsp; <span>WORK EXPERIENCE</span> &nbsp; &nbsp; ———
                                 </h5>
+                                <p className={styles.experienceParagraph}>» 2023 // NOW
+                                    <span> — Full Stack Developer —
+                                    </span> FREELANCER
+                                </p>
                                 <p className={styles.experienceParagraph}>» 2021 // 2023
                                     <span> — Senior Planning Analyst —
                                     </span> CBA
