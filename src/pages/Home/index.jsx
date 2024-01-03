@@ -23,11 +23,13 @@ export const Home = ({ }) => {
                         <p className={styles.sectionTitle}>
                             ——— &nbsp; &nbsp; <span>HI, I'M VALDIR SAMPAIO</span> &nbsp; &nbsp; ———
                         </p>
-                        <h1>Let's create <img src={iconHome} alt="icon" className={styles.iconImage} />
-                            <br /> some <p className={styles.homeCard} data-back="websites" data-front="products">
-                            </p>
-                            <span> together!</span>
-                        </h1>
+                        <div className={styles.sectionInfo}>
+                            <h1>Let's create</h1> <img src={iconHome} alt="icon" className={styles.iconImage} />
+                            <p>some
+                            <span className={styles.homeCard} data-back="websites" data-front="products">
+                            </span>
+                            together!</p>
+                        </div>
                         <div className={styles.buttonsContainer}>
                             <a href="https://github.com/valdirsampaio" target="_blank" className={styles.socialButton} ><FaGithub className={styles.linkIcon} /> </a>
                             <a href="https://www.linkedin.com/in/valdirsampaio/" target="_blank" className={styles.socialButton} ><FaLinkedinIn className={styles.linkIcon} /> </a>

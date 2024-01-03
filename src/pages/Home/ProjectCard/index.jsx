@@ -8,7 +8,7 @@ export const ProjectCard = ({ project }) => {
                 <button className={styles.projectButton}>
                     <div className={styles.backgroundBox}>
                         <img src={project.image} alt="projectImg" className={styles.projectImage} />
-                        <a href={project.url} className={styles.viewButton} data-back="VISIT WEBSITE" data-front="VISIT WEBSITE">
+                        <a href={project.url} className={styles.viewButton} data-back="VISIT WEBSITE" data-front="VISIT WEBSITE" target="_blank">
                         </a>
                     </div>
                     <div className={styles.textContainer}>

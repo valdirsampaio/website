@@ -28,9 +28,6 @@ export const Header = () => {
                             <span>CONTACT</span>
                         </a>
                     </div>
-                    <div className={styles.responsiveButton}>
-                        <button className={styles.buttonsList} ><MdMenu className={styles.listIcon} /> </button>
-                    </div>
                 </section>
             </div>
         </header >

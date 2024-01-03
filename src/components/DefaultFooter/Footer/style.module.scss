@@ -1,6 +1,7 @@
 .footer {
     width: 100%;
     height: 8.5rem;
+    margin-bottom: 2rem;
 
     display: flex;
     align-items: center;
@@ -54,4 +55,37 @@
     }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .footer {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    
+        .footerContainer {
+            width: 91%;
+            min-width: 22.115rem;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+    
+            span {
+                gap: 0.5rem;
+                align-items: center;
+                justify-content: center;
+    
+                p {
+                    font-size: var(--font-6);
+                }
+    
+                a {
+                    font-size: var(--font-6);
+                }
+            }
+    
+            p {
+                font-size: var(--font-7);
+            }
+        }
+    }
+}
