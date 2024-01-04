@@ -59,12 +59,8 @@ export const About = ({ }) => {
                                 <h5 className={styles.sectionTitle}>
                                     ——— &nbsp; &nbsp; <span>EDUCATION</span> &nbsp; &nbsp; ———
                                 </h5>
-                                <p className={styles.educationParagraph}>» 2023 // Now
-                                    <span> — Back End Programming  —
-                                    </span> Kenzie Academy
-                                </p>
-                                <p className={styles.educationParagraph}>» 2023 // 2023
-                                    <span> — Front End Programming  —
+                                <p className={styles.educationParagraph}>» 2023 // 2024
+                                    <span> — Full Stack Development  —
                                     </span> Kenzie Academy
                                 </p>
                                 <p className={styles.educationParagraph}>» 2019 // 2022
