@@ -33,7 +33,7 @@ export const Home = ({ }) => {
                         <div className={styles.buttonsContainer}>
                             <a href="https://github.com/valdirsampaio" target="_blank" className={styles.socialButton} ><FaGithub className={styles.linkIcon} /> </a>
                             <a href="https://www.linkedin.com/in/valdirsampaio/" target="_blank" className={styles.socialButton} ><FaLinkedinIn className={styles.linkIcon} /> </a>
-                            <a href="https://online.fliphtml5.com/pexdn/biuh/#p=1" target="_blank" className={styles.socialButton} ><AiOutlinePaperClip className={styles.linkIcon} /> </a>
+                            <a href="https://files.fm/u/88k5h88cxe#/view/n9yvzk5g8t" target="_blank" className={styles.socialButton} ><AiOutlinePaperClip className={styles.linkIcon} /> </a>
                             <a href="mailto:valdirgomes.sjr@gmail.com?subject=Hi from your portfolio!" target="_blank" className={styles.contactButton} data-back="GET IN TOUCH" data-front="GET IN TOUCH">
                             </a>
                         </div>
