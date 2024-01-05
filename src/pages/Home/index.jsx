@@ -38,7 +38,7 @@ export const Home = ({ }) => {
                             </a>
                         </div>
                     </section>
-                    <section className={styles.projectsSection}>
+                    <section id="projects" className={styles.projectsSection}>
                         <p className={styles.sectionTitle}>
                             ——— &nbsp; &nbsp; <span>SELECTED PROJECTS</span> &nbsp; &nbsp; ———
                         </p>
