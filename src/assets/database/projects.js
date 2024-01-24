@@ -1,6 +1,6 @@
 import tooCoworking from "../tooCoworking.png"
 import fashionStore from "../fashionStore.png"
-import movieRate from "../movieRate.png"
+import altoArquitetura from "../altoArquitetura.png"
 
 export const projects = [
     {
@@ -13,18 +13,18 @@ export const projects = [
     },
     {
         "id": 2,
+        "name": "Alto Arquitetura",
+        "image": altoArquitetura,
+        "year": "2023",
+        "url": "https://altoarquitetura.vercel.app/",
+        "type": "Portfólio"
+    },
+    {
+        "id": 3,
         "name": "Fashion Store",
         "image": fashionStore,
         "year": "2023",
         "url": "https://fashion-store-vert.vercel.app/",
         "type": "Store"
-    },
-    {
-        "id": 3,
-        "name": "Movie",
-        "image": movieRate,
-        "year": "2023",
-        "url": "https://movie-rate-delta.vercel.app/",
-        "type": "Social"
     }
 ]

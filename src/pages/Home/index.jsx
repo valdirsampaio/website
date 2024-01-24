@@ -13,7 +13,12 @@ import { UserContext } from "../../providers/UserContext";
 
 export const Home = ({ }) => {
 
-    const { setLoading } = useContext(UserContext);
+    const { setLoading, aboutPage, setAboutPage } = useContext(UserContext);
+
+    const navigateToAbout = () => {
+        setAboutPage(true)
+        setLoading(true)
+    }
 
     return (
         <DefaultFooter>
@@ -33,7 +38,7 @@ export const Home = ({ }) => {
                         <div className={styles.buttonsContainer}>
                             <a href="https://github.com/valdirsampaio" target="_blank" className={styles.socialButton} ><FaGithub className={styles.linkIcon} /> </a>
                             <a href="https://www.linkedin.com/in/valdirsampaio/" target="_blank" className={styles.socialButton} ><FaLinkedinIn className={styles.linkIcon} /> </a>
-                            <a href="https://files.fm/u/88k5h88cxe#/view/n9yvzk5g8t" target="_blank" className={styles.socialButton} ><AiOutlinePaperClip className={styles.linkIcon} /> </a>
+                            <a href="https://drive.google.com/file/d/1zq9C9KIjV4MXkGxnVYmbgM4D4f48etWX/view?usp=drive_link" target="_blank" className={styles.socialButton} ><AiOutlinePaperClip className={styles.linkIcon} /> </a>
                             <a href="mailto:valdirgomes.sjr@gmail.com?subject=Hi from your portfolio!" target="_blank" className={styles.contactButton} data-back="GET IN TOUCH" data-front="GET IN TOUCH">
                             </a>
                         </div>
@@ -59,7 +64,7 @@ export const Home = ({ }) => {
                         <h3>... Always committed to carrying out projects with excellence and organization, in order to provide the best experience to the customer,<span> as well as facilitating the work of the team included in the project. </span>
                         </h3>
                         <div className={styles.buttonsContainer}>
-                            <Link onClick={() => setLoading(true)} to="/about" className={styles.contactButton} data-back="ABOUT ME" data-front="ABOUT ME">
+                            <Link onClick={() => navigateToAbout()} to="/about" className={styles.contactButton} data-back="ABOUT ME" data-front="ABOUT ME">
                             </Link>
                         </div>
                     </section>
